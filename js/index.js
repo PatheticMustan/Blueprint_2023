@@ -15,17 +15,21 @@ function onInput() {
 
 function submit() {
     rantbox.readOnly = true;
+    const response=document.getElementById("response");
+    let advice="";
+    Object.keys(keywords).map(word => {
+      if (rantbox.value.indexOf(word) !== -1) {
+       advice=advice+keywords[word]+"\n"
+      }
+  })
+  response.innerHTML=advice;
 }
-
-
 
 let keywords = {
-    angry: "take a deep breath",
-    sad: "do something that makes you happy, like listening to music"
+    angry: "Take a deep breath, you will feel better in no time.",
+    sad: "Do something that makes you happy, like listening to music.",
+    happy: "Keep doing what makes you happy!",
+    bad: "Things will get better don't you worry!",
+    not_bad: "Focus on the good aspects of your day, somedays life is just normal."
 }
 
-Object.keys(keywords).map(word => {
-    if (rantbox.value.indexOf(word) !== -1) {
-        console.log(keywords[word]);
-    }
-})
