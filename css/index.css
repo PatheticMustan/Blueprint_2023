@@ -27,3 +27,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#rock {
+    height: 400;
+    border-radius: 12px;
+}
