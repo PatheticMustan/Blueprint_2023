@@ -1,11 +1,13 @@
-// code to make textarea auto-resize
-const tx = document.getElementsByTagName("textarea");
-for (let i = 0; i < tx.length; i++) {
-  tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
-  tx[i].addEventListener("input", OnInput, false);
-}
+document.onload = () => {
+  // code to make textarea auto-resize
+  const rantbox = document.getElementById("rantbox");
+  for (let i=0; i<rantbox.length; i++) {
+    rantbox[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+    rantbox[i].addEventListener("input", OnInput, false);
+  }
 
-function OnInput() {
-  this.style.height = 0;
-  this.style.height = (this.scrollHeight) + "px";
+  function OnInput() {
+    this.style.height = 0;
+    this.style.height = (this.scrollHeight) + "px";
+  }
 }
