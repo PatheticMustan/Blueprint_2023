@@ -67,12 +67,12 @@ h1 {
 
 .row {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 10em 1fr 4em;
     grid-template-rows: 1fr;
-    grid-column-gap: 0px;
+    grid-column-gap: 20px;
     grid-row-gap: 0px;
     padding-top: 2em;
     padding-bottom: 2em;
     flex-wrap: wrap;
+    word-break: break-all;
 }
-
