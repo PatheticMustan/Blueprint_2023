@@ -5,7 +5,10 @@ rantbox.addEventListener("input", onInput, false);
 
 function onInput() {
     this.style.height = 0;
-    this.style.height = Math.min((this.scrollHeight) + "px";
+    
+    let targetHeight = Math.min(Math.max(152, this.scrollHeight), 300);
+    this.style.height = targetHeight + "px";
+    this.style.overflowY = (targetHeight===this.scrollHeight)? "hidden" : "scroll";
 }
 
 function submit() {
@@ -45,9 +48,12 @@ let keywords = {
     "busy":"Be sure that you have time for yourself! Try and keep yourself organized so that things dont get too much for you.",
     "tired":"I know things can be exhausting, be sure to take breaks and refresh your head.",
     "exhausted":"I see that you're tired. Make sure to get some rest and continue on once you are in the right mental space.",
+    "enjoyable":"Thats great! Its important to have a great time.",
+    "fine":"Its great that youre doing fine. Hopefully that fine into great",
     "":"",
-    "":"",
-    "":"",
-    "":"",
-    "":"",
+    "cool":"Im glad that youre having a fun time",
+    "frustrating":"Be sure to take a break from stressful situations. Refresh your head then come back stronger than ever! I believe in you!",
+    "amazing": "Im glad things are going so well for you!",
+    "mad": "Try and keep a positive attitude! Youll get more stuff done with a positive mindset rather than a negative one",
+    "angry": ""
   }
