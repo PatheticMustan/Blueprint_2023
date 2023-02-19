@@ -1,9 +1,17 @@
+body {
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: gray;
+}
+
 .header {
     display: flex;
     flex-direction: column;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
+    background-color: darkgray;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
