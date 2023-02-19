@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<!-- doctype html E:3 -->
 <html>
     <head>
         <title>Ranting Rock</title>
+        <link rel="stylesheet" href="./index.css"/>
+        <script src="./index.js"></script>
     </head>
-    <body class="background">
-        <h1>Ranting Rock</h1>
-        <h3>Hello I am the Ranting Rock! What is worrying you?</h3>
-        <label> Feel free to rant:<br></label> <input type="rantbox" id="name" name="name" required minlength="100" maxlength="100" size="100">
-        <div class="button-container">
+
+    <body>
+        <div class="header">
+            <h1>Ranting Rock</h1>
+            <h3>Hello I am the Ranting Rock! What is worrying you?</h3>
+        </div>
+        <div class="content">
+            <label>Feel free to rant: </label> <br>
+            <textarea id="rantbox"></textarea>
             <div id="submitbutton" onclick="submit()"><br>Submit</div>
         </div>
     </body>
