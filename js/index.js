@@ -10,6 +10,10 @@ if (localStorage.getItem("posts") === null) {
     localStorage.setItem("posts", JSON.stringify([]));
 } else {
     // if it's not undefined, populate the previousPosts field
+    const posts = JSON.parse(localStorage.getItem("posts"));
+    posts.map(([date, text]) => {
+        addPost(date, text);
+    });
 }
 
 function onInput() {
@@ -37,25 +41,34 @@ function submit() {
 
     // append to previousPosts, save
     const currentDate = new Date();
+    addPost(currentDate, rantbox.value);
+
+    // add to localStorage
+    const posts = JSON.parse(localStorage.getItem("posts"));
+    posts.push([currentDate, rantbox.value]);
+    localStorage.setItem("posts", JSON.stringify(posts));
+
+    rantbox.value = "";
+}
+
+function addPost(currentDate, text) {
     const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
     
     const row = document.createElement("div");
     const date = document.createElement("div");
-    date.innerText = currentDate.toLocaleDateString('en-us', options);
-    const text = document.createElement("div");
-    text.innerText = rantbox.value;
-    const deleteButton = document.createElement("button");
-    deleteButton.innerText = "Delete";
-    deleteButton.onclick = () => {
-
-    }
+    date.innerText = new Date(currentDate).toLocaleDateString('en-us', options);
+    const postText = document.createElement("div");
+    postText.innerText = text;
+    // const deleteButton = document.createElement("button");
+    // deleteButton.innerText = "Delete";
+    // deleteButton.onclick = () => {}
     
     row.classList.add("row");
     row.appendChild(date);
-    row.appendChild(text);
-    row.appendChild(deleteButton);
+    row.appendChild(postText);
+    // row.appendChild(deleteButton);
 
-    previousPosts.append(row);
+    previousPosts.prepend(row);
+
     
-    rantbox.value = "";
 }
