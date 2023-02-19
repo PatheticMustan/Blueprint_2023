@@ -32,3 +32,13 @@ body {
 textarea {
     resize: none;
  }
+#rock {
+    height: 400;
+    border-radius: 12px;
+}
+
+h1 {
+    text-align:center;
+    font-size: 60px;
+    font-family:copperplate;
+}
