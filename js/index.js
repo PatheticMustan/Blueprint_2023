@@ -26,7 +26,10 @@ function submit() {
 }
 
 let keywords = {
-    angry: "Take a deep breath.",
-    sad: "Do something that makes you happy, like listening to music."
+    angry: "Take a deep breath, you will feel better in no time.",
+    sad: "Do something that makes you happy, like listening to music.",
+    happy: "Keep doing what makes you happy!",
+    bad: "Things will get better don't you worry!",
+    not_bad: "Focus on the good aspects of your day, somedays life is just normal."
 }
 

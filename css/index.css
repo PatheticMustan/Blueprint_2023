@@ -13,9 +13,6 @@ body {
 .content {
     background-color: darkgray;
     text-align: center;
-    padding-top: 2em;
-    padding-bottom: 2em;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -43,3 +40,12 @@ h1 {
     font-size: 60px;
     font-family:copperplate;
 }
+
+#response {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    
+  }
+ 
+ 
