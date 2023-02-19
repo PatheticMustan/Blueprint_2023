@@ -1,13 +1,14 @@
 document.onload = () => {
     // code to make textarea auto-resize
     const rantbox = document.getElementById("rantbox");
-    rantbox[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
-    rantbox[i].addEventListener("input", onInput, false);
+    rantbox.setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+    rantbox.addEventListener("input", onInput, false);
 
     
 }
 
 function onInput() {
+    alert(1);
     this.style.height = 0;
     this.style.height = (this.scrollHeight) + "px";
 }
@@ -15,3 +16,16 @@ function onInput() {
 function submit() {
     rantbox.readOnly = true;
 }
+
+
+
+let keywords = {
+    angry: "take a deep breath",
+    sad: "do something that makes you happy, like listening to music"
+}
+
+Object.keys(keywords).map(word => {
+    if (rantbox.value.indexOf(word) !== -1) {
+        console.log(keywords[word]);
+    }
+})
