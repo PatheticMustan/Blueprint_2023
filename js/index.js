@@ -10,4 +10,7 @@ document.onload = () => {
     this.style.height = 0;
     this.style.height = (this.scrollHeight) + "px";
   }
+  function submit() {
+    tx.readOnly=true
+  }
 }
