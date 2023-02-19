@@ -59,4 +59,11 @@ h1 {
 .previousPosts {
     background-color: darkgray;
     border: 2px solid black;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    
 }
+
