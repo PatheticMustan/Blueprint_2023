@@ -1,6 +1,6 @@
 body {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 15%;
+    padding-right: 15%;
     background-color: gray;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
@@ -18,12 +18,26 @@ body {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    padding-bottom: 2em;
 }
+
+@media only screen and (max-width: 1000px) {
+    .content {
+        display: block;
+    }
+
+    body {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
 
 .ultracenter {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 textarea {
@@ -38,14 +52,9 @@ textarea {
 h1 {
     text-align:center;
     font-size: 60px;
-    font-family:copperplate;
 }
 
 #response {
-    background-color: gray;
     color: white;
     text-align: center;
-    
-  }
- 
- 
+}
