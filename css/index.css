@@ -12,12 +12,14 @@ body {
 
 .content {
     background-color: darkgray;
+    border: 2px solid black;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    padding-top: 2em;
     padding-bottom: 2em;
 }
 
@@ -43,18 +45,18 @@ body {
 textarea {
     resize: none;
  }
- 
-#rock {
-    height: 50%;
-    border-radius: 12px;
-}
 
 h1 {
-    text-align:center;
+    text-align: center;
     font-size: 60px;
 }
 
 #response {
     color: white;
     text-align: center;
+}
+
+.previousPosts {
+    background-color: darkgray;
+    border: 2px solid black;
 }
